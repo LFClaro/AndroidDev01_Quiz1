@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/humberYellow"
+    tools:context=".UpdateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textFields"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_text_vert_35pc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/name"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvID"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/id"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvAge"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/age"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/gender"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvGPA"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+        <TextView
+            android:id="@+id/tvGPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/gpa"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvCourses"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvGender" />
+
+        <TextView
+            android:id="@+id/tvCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="@string/courses"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvGPA" />
+
+        <EditText
+            android:id="@+id/tvNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter name here..."
+            android:textSize="26sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvName"
+            app:layout_constraintBottom_toTopOf="@+id/tvIDEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tvIDEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter name here..."
+            android:textSize="26sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvID"
+            app:layout_constraintBottom_toTopOf="@+id/tvAgeEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameEdit" />
+
+        <EditText
+            android:id="@+id/tvAgeEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter name here..."
+            android:textSize="26sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvIDEdit" />
+
+        <EditText
+            android:id="@+id/tvGenderEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter name here..."
+            android:textSize="26sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvGender"
+            app:layout_constraintBottom_toTopOf="@+id/tvGPAEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgeEdit" />
+
+        <EditText
+            android:id="@+id/tvGPAEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter name here..."
+            android:textSize="26sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvGPA"
+            app:layout_constraintBottom_toTopOf="@+id/tvCoursesEditName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvGenderEdit" />
+
+        <EditText
+            android:id="@+id/tvCoursesEditName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:hint="Enter name here..."
+            android:inputType="textMultiLine"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCourses"
+            app:layout_constraintEnd_toStartOf="@id/tvCoursesEditCode"
+            app:layout_constraintStart_toEndOf="@id/guideline_text_vert_35pc"
+            app:layout_constraintTop_toBottomOf="@+id/tvGPAEdit" />
+
+        <EditText
+            android:id="@+id/tvCoursesEditCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:hint="Enter name here..."
+            android:inputType="textMultiLine"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCourses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCoursesEditName"
+            app:layout_constraintTop_toBottomOf="@+id/tvGPAEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="updateSave"
+        android:padding="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/save"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_main_vert_50pc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFields" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="updateCancel"
+        android:padding="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/cancel"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_main_vert_50pc"
+        app:layout_constraintTop_toBottomOf="@+id/textFields" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_main_vert_50pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
